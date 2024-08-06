@@ -7,3 +7,9 @@ function run(){
     output.contentDocument.body.innerHTML = htmlCode + "<style>" + cssCode + "</style>";
     output.contentWindow.eval(jsCode);
 }
+let fullScreen = document.getElementById(`output-container`);
+let fullScreenBtn = document.getElementById(`fullscreenbtn`);
+
+fullScreenBtn.addEventListener(`click`, ()=>{
+    fullScreen.classList.toggle(`fullscreen`);
+})
